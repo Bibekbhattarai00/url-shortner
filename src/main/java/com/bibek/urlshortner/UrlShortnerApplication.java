@@ -10,13 +10,14 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-
 @SpringBootApplication
 @EnableJpaAuditing
 @OpenAPIDefinition(
         info = @Info(title = "URL Shortner API", version = "V-1.0", description = "API Documentation"),
-        servers = {@Server(url = "http://localhost:9091/url-shortner", description = "Local Server URL"),
-                @Server(url = "https://url-shortner-r0pv.onrender.com/url-shortner", description = "Deployed Server URL")})
+        servers = {@Server(url = "https://url-shortner-r0pv.onrender.com/url-shortner",
+                description = "Deployed Server URL"),
+                @Server(url = "http://localhost:9091/url-shortner",
+                        description = "Local Server URL")})
 public class UrlShortnerApplication {
 
     public static void main(String[] args) {
@@ -24,3 +25,4 @@ public class UrlShortnerApplication {
     }
 
 }
+

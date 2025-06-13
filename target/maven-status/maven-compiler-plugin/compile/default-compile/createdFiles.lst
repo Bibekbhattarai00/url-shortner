@@ -1,6 +1,7 @@
 com\bibek\urlshortner\generic\PaginationResponse.class
 com\bibek\urlshortner\utils\CustomPaginationHandler.class
 com\bibek\urlshortner\annotation\StandardApiResponses.class
+com\bibek\urlshortner\config\CorsConfig.class
 com\bibek\urlshortner\auditingconfig\AuditingEntity.class
 com\bibek\urlshortner\service\url\impl\ShortUrlServiceImpl.class
 com\bibek\urlshortner\constants\MessageConstants.class
