@@ -14,8 +14,8 @@ import com.bibek.urlshortner.generic.PaginationResponse;
 import com.bibek.urlshortner.service.url.service.ShortUrlService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,7 +35,7 @@ public class UrlController extends BaseController {
     @Operation(summary = "Generate Short code", description = "This api generates short code for the provided long urls")
     @StandardApiResponses
     @PostMapping(ApiConstants.Url.SHORTEN)
-    public GenericResponse<UrlResponseDto> shortenUrl(@RequestBody UrlRequestDto urlRequestDto) {
+    public GenericResponse<UrlResponseDto> shortenUrl(@Valid @RequestBody UrlRequestDto urlRequestDto) {
         return successResponse(shortUrlService.shortenUrl(urlRequestDto), MessageConstants.SUCCESS.getCode());
     }
 
